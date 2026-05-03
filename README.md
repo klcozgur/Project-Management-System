@@ -17,33 +17,34 @@ It allows administrators to manage projects and assign users, while employees ca
 
 
 
-🛠️ Tech Stack
-Backend
-    Java
-    Spring Boot
-    Spring Data JPA
-    REST API
-    PostgreSQL
-    
-Frontend
-    React
-    JavaScript
-    HTML / CSS
-    
-Tools
-    Postman
-    IntelliJ IDEA
+## 🛠 Tech Stack
+
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- REST API
+- PostgreSQL
+
+### Frontend
+- React
+- JavaScript
+- HTML / CSS
+
+### Tools
+- Postman
+- IntelliJ IDEA
 
 
 
 
 
 
-Project-Management-System/
-│
-├── ozgur-kilic-staj-projesi - Kopya/ 
-└── Backend and Frontend
-
+ozgur-kilic-staj-projesi - Kopya/
+├── .mvn/
+│ └── wrapper/
+├── frontend/
+├── src/
 
 
 
@@ -58,6 +59,10 @@ cd ozgur-kilic-staj-projesi - Kopya
 mvn spring-boot:run
 
 
+```md
+## ⚙️ Run Frontend
+
+```bash
 cd frontend
 npm install
 npm start
@@ -68,8 +73,7 @@ PostgreSQL is used as database
 Make sure you update application.properties:
 spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
 spring.datasource.username=postgres
-spring.datasource.password=123
-
+spring.datasource.password=your_password
 
 👨‍💻 Author
 Özgür Kılıç
