@@ -39,7 +39,9 @@ It allows administrators to manage projects and assign users, while employees ca
 
 
 
-
+```bash
+## 📂 Project Structure
+ 
 ozgur-kilic-staj-projesi - Kopya/
 ├── .mvn/
 │ └── wrapper/
