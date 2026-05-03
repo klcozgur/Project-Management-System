@@ -79,6 +79,8 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
 spring.datasource.username=postgres
 spring.datasource.password=your_password
 
+
+
 👨‍💻 Author
 Özgür Kılıç
 
