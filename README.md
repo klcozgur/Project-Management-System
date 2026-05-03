@@ -2,11 +2,19 @@ This project is a full-stack Project Management System developed using Spring Bo
 It allows administrators to manage projects and assign users, while employees can view and update their assigned projects.  
 
 
+
+
+
+
 👨‍💼 Assign Role (ADMIN / EMPLOYEE)
 📁 Project Management (Create, Update, Delete)
 👥 Assign Users to Projects
 📊 View Project Status
 🔄 Update Project Status (New, In Progress, Completed)
+
+
+
+
 
 
 🛠️ Tech Stack
@@ -27,10 +35,18 @@ Tools
     IntelliJ IDEA
 
 
+
+
+
+
 Project-Management-System/
 │
 ├── ozgur-kilic-staj-projesi - Kopya/ 
 └── Backend and Frontend
+
+
+
+
 
 
 Clone the repository
