@@ -50,7 +50,7 @@ Project-Management-System/
 
 
 Clone the repository
-git clone https://github.com/YOUR_USERNAME/Project-Management-System.git
+git clone https://github.com/klcozgur/Project-Management-System.git
 cd Project-Management-System
 
 
