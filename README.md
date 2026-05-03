@@ -50,7 +50,9 @@ ozgur-kilic-staj-projesi - Kopya/
 
 
 
-Clone the repository
+Clone the Repository
+
+```bash
 git clone https://github.com/klcozgur/Project-Management-System.git
 cd Project-Management-System
 
