@@ -1,0 +1,96 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+        <changeSet id="0013" author="ozgur">
+                <sqlFile path="changelog/0001_init_tables.sql" relativeToChangelogFile="true"/>
+        </changeSet>
+        <changeSet id="0014" author="ozgur">
+                <createTable tableName="users">
+                        <column name="id" type="serial">
+                                <constraints primaryKey="true" nullable="false"/>
+                        </column>
+                        <column name="name" type="varchar(255)">
+                                <constraints nullable="false"/>
+                        </column>
+                        <column name="position" type="varchar(255)">
+                                <constraints nullable="false"/>
+                        </column>
+                        <column name="surname" type="varchar(255)">
+                                <constraints nullable="false"/>
+                        </column>
+                        <column name="role" type="varchar(50)">
+                                <constraints nullable="false"/>
+                        </column>
+                </createTable>
+        </changeSet>
+
+
+        <changeSet id="0015" author="ozgur">
+        <createTable tableName="user_projects">
+                <column name="user_id" type="INT">
+                        <constraints nullable="false"/>
+                </column>
+                <column name="project_id" type="INT">
+                        <constraints nullable="false"/>
+                </column>
+        </createTable>
+
+        <addPrimaryKey tableName="user_projects" columnNames="user_id, project_id" constraintName="pk_user_projects"/>
+
+        <addForeignKeyConstraint
+                baseTableName="user_projects"
+                baseColumnNames="user_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                constraintName="fk_user_projects_users"/>
+
+        <addForeignKeyConstraint
+                baseTableName="user_projects"
+                baseColumnNames="project_id"
+                referencedTableName="projects"
+                referencedColumnNames="id"
+                constraintName="fk_user_projects_projects"/>
+        <createTable tableName="employees_projects">
+                <column name="employee_id" type="integer">
+                        <constraints nullable="false"/>
+                </column>
+                <column name="project_id" type="integer">
+                        <constraints nullable="false"/>
+                </column>
+        </createTable>
+        <addPrimaryKey tableName="employees_projects" columnNames="employee_id, project_id" constraintName="pk_employees_projects"/>
+
+
+        <addForeignKeyConstraint
+                baseTableName="employees_projects"
+                baseColumnNames="employee_id"
+                referencedTableName="employees"
+                referencedColumnNames="id"
+                constraintName="fk_employee_id"/>
+
+        <addForeignKeyConstraint
+                baseTableName="employees_projects"
+                baseColumnNames="project_id"
+                referencedTableName="projects"
+                referencedColumnNames="id"
+                constraintName="fk_project_id"/>
+        </changeSet>
+        <changeSet id="0016" author="ozgur">
+
+                <addUniqueConstraint
+                        tableName="employees_projects"
+                        columnNames="employee_id, project_id"
+                        constraintName="uk_employee_project_unique"/>
+
+                <addUniqueConstraint
+                        tableName="projects"
+                        columnNames="name"
+                        constraintName="uk_project_name_unique"/>
+
+        </changeSet>
+
+
+</databaseChangeLog>
