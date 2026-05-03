@@ -40,7 +40,7 @@ It allows administrators to manage projects and assign users, while employees ca
 
 
 ```bash
-##  Project Structure
+## 📂 Project Structure
  
 ozgur-kilic-staj-projesi - Kopya/
 ├── .mvn/
@@ -64,7 +64,7 @@ mvn spring-boot:run
 
 
 ```md
-##  Run Frontend
+## ⚙️ Run Frontend
 
 ```bash
 cd frontend
